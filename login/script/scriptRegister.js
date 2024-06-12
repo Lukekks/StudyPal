@@ -32,8 +32,15 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
             profilePicture: "../../images/fotoProfile.png" // Defina um valor padrão
         });
 
+        // Verifique o UID do usuário
+        console.log("User UID:", user.uid);
+
+        // Verifique o URL gerado para o redirecionamento
+        const profileUrl = `https://lukekks.github.io/forum/telaForum.html?uid=${user.uid}`;
+        console.log("Redirection URL:", profileUrl);
+
         // Redireciona para a página de perfil do usuário usando seu UID
-        window.location.href = `../../profile/principal/profile.html?uid=${user.uid}`;
+        window.location.replace(profileUrl);
     } catch (error) {
         console.error("Erro ao registrar: ", error);
         alert("Erro ao registrar: " + error.message);
