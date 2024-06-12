@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Estudos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Monitoramento de Estudos</h1>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Definir Meta de Estudo</h3>
+                <form id="goalForm">
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" class="form-control" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hours">Horas</label>
+                        <input type="number" class="form-control" id="hours" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Adicionar Meta</button>
+                </form>
+            </div>
+
+            <div class="col-md-8">
+                <h3>Metas de Estudo</h3>
+                <ul id="goalList" class="list-group">
+                    <!-- Metas de estudo serão inseridas aqui -->
+                </ul>
+
+                <h3 class="mt-4">Registrar Progresso</h3>
+                <form id="progressForm">
+                    <div class="form-group">
+                        <label for="studySubject">Assunto</label>
+                        <select class="form-control" id="studySubject" required>
+                            <option value="">Selecione um item da lista</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="studyHours">Horas</label>
+                        <input type="number" class="form-control" id="studyHours" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Registrar Progresso</button>
+                </form>
+
+                <h3 class="mt-4">Progresso</h3>
+                <ul id="progressList" class="list-group">
+                    <!-- Registros de progresso serão inseridos aqui -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

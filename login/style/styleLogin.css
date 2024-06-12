@@ -1,0 +1,171 @@
+body {
+    font-family: 'Imprima', sans-serif !important;
+    background-color: #f8f9fa;
+}
+
+.container-menu {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    box-shadow: 0 8px 6px -6px #333333;
+}
+
+.container-nav {
+    max-width: 1400px;
+    max-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    color: #007bff;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/*START FOOTER STYLE*/
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container-footer .container-footer-nav{
+    width: 100%;
+    background: #000;
+}
+
+.container-footer .container-footer-nav .footer-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 10px 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options{
+    display: flex;
+    max-width: 650px;
+    justify-content: space-between;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul{
+    list-style: none;
+    padding: 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul li{
+    margin: 0 0 10px 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul a{
+    color: #fff;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul a:hover{
+    color: #e9a5ae;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social{
+    display: flex;
+    align-items: center;
+}
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social a{
+    text-decoration: none;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social svg{
+    fill: #fff;
+    cursor: pointer;
+    transition: fill .2s;
+    margin: 0 10px 0 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social a:hover svg{
+    fill: #e9a5ae;
+}
+
+.container-footer .container-footer-nav .footer-nav img{
+    width: 200px;
+    margin: 0 0 40px 0;
+}
+
+.container-footer .footer-copy{
+    width: 100%;
+    text-align: center;
+    background: #272727;
+    color: #fff;
+    padding: 10px;
+}
+/*END FOOTER STYLE*/

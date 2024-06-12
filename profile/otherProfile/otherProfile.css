@@ -1,0 +1,269 @@
+body {
+    font-family: 'Imprima', sans-serif !important;
+}
+
+.container-menu {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    box-shadow: 0 8px 6px -6px #333333;
+}
+
+.container-nav {
+    max-width: 1400px;
+    max-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80px;
+    cursor: pointer;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info img {
+    width: 120px;
+    height: 120px;
+    border: 5px solid white;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.profile-main {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.menu-guides {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-guides a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.menu-guides a:hover {
+    color: #dda7c2;
+}
+
+.profile-body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+}
+
+.bio, .sociais {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.bio h3, .sociais h3 {
+    font-size: 1.25rem;
+}
+
+#bio-text, #social-text {
+    margin-bottom: 15px;
+}
+
+.btn-success {
+    background-color: green;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+.btn-danger {
+    background-color: red;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.friend-item {
+    display: flex;
+    justify-content: space-between; /* Adicionado para alinhar os itens ao lado oposto */
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.friend-item .details {
+    display: flex;
+    align-items: center;
+}
+
+.friend-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.btn-view-profile {
+    background-color: #000000 !important;
+    border: none;
+    color: white;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-view-profile:hover {
+    background-color: #dda7c2 !important;
+    color: black;
+}
+
+/*START FOOTER STYLE*/
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container-footer .container-footer-nav{
+    width: 100%;
+    background: #000;
+}
+
+.container-footer .container-footer-nav .footer-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 10px 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options{
+    display: flex;
+    max-width: 650px;
+    justify-content: space-between;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul{
+    list-style: none;
+    padding: 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul li{
+    margin: 0 0 10px 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul a{
+    color: #fff;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul a:hover{
+    color: #e9a5ae;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social{
+    display: flex;
+    align-items: center;
+}
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social a{
+    text-decoration: none;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social svg{
+    fill: #fff;
+    cursor: pointer;
+    transition: fill .2s;
+    margin: 0 10px 0 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social a:hover svg{
+    fill: #e9a5ae;
+}
+
+.container-footer .container-footer-nav .footer-nav img{
+    width: 200px;
+    margin: 0 0 40px 0;
+}
+
+.container-footer .footer-copy{
+    width: 100%;
+    text-align: center;
+    background: #272727;
+    color: #fff;
+    padding: 10px;
+}
+/*END FOOTER STYLE*/

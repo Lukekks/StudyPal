@@ -1,0 +1,586 @@
+.container-menu {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5000;
+    box-shadow: 0 8px 6px -6px #333333;
+}
+
+.container-menu .container-nav-options ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.container-menu .container-nav-options ul li a:hover {
+    color: #a8a8a8;
+}
+
+.container-menu .container-nav {
+    max-width: 1400px;
+    max-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-menu .container-nav .logo {
+    position: relative;
+    display: flex;
+    width: 80px;
+    cursor: pointer;
+}
+
+.notification-profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ajuste o valor conforme necessário */
+}
+
+.notification-profile-container .btn-link {
+    margin-right: 0; /* Remover margens adicionais se houver */
+}
+
+.timestamp {
+    font-size: 0.75em; /* Ajuste do tamanho da fonte do timestamp */
+    color: #000000;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.notification-profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ajuste o valor conforme necessário */
+}
+
+.notification-profile-container .btn-link {
+    margin-right: 0; /* Remover margens adicionais se houver */
+}
+
+.notification-container {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+}
+
+.notification-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item p {
+    margin: 0;
+}
+
+.notification-item button {
+    margin-top: 5px;
+    display: block;
+}
+
+.nav-link {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.group-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 15px; /* Espaçamento entre os elementos */
+    margin-bottom: 20px;
+}
+
+.group-header img.group-picture {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: 80px;
+}
+
+.group-header h1 {
+    margin: 0;
+    font-size: 1.5em; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+.messages-window {
+    height: 400px;
+    overflow-y: scroll;
+    background-color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.message-input-container {
+    padding: 10px;
+    background-color: #f1f1f1; /* Cor de fundo para toda a área de envio */
+    border-top: 1px solid #ccc; /* Linha de separação */
+}
+
+.message-input-background {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Cor de fundo específica para a caixa de envio */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar a caixa */
+    border: 1px solid #ccc;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.message-header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-header span {
+    font-weight: bold;
+}
+
+.message-content {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message.sent .message-content {
+    background-color: #cd83b3;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.message.received .message-content {
+    background-color: #dda7c2;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.timestamp {
+    font-size: 0.75em;
+    color: #000000;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.message.sent {
+    align-items: flex-end;
+}
+
+.message.received {
+    align-items: flex-start;
+}
+
+.notification-profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ajuste o valor conforme necessário */
+}
+
+.notification-profile-container .btn-link {
+    margin-right: 0; /* Remover margens adicionais se houver */
+}
+
+
+.member-picture {
+    width: 40px; /* Tamanho do avatar */
+    height: 40px;
+    margin-right: 10px; /* Espaço entre o avatar e o campo de texto */
+}
+
+.menu-left {
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+#chat-input {
+    flex: 1;
+    margin-right: 10px; /* Espaço entre o campo de texto e o ícone de anexar */
+    resize: none; /* Remover a capacidade de redimensionar */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda do campo de texto */
+}
+
+#file-upload + label {
+    cursor: pointer;
+    margin-right: 10px; /* Espaço entre o ícone de anexar e o botão de enviar */
+}
+
+#send-chat-btn {
+    background-color: #000; /* Cor de fundo preta */
+    border: none;
+    color: #fff; /* Cor do texto branca */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mãozinha */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+#send-chat-btn:hover {
+    background-color: #e9a5ae; /* Cor de fundo rosa padrão ao passar o mouse */
+}
+
+/* Estilizar o botão de upload de arquivo */
+#file-upload-btn {
+    background: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor de mãozinha */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#file-upload-btn img {
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    margin-right: 10px; /* Espaço entre o ícone e o botão de enviar */
+}
+
+#file-upload-btn:hover img {
+    fill: #e9a5ae; /* Cor rosa padrão ao passar o mouse */
+}
+
+.messages-window {
+    height: 400px;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.remove-member-btn {
+    margin-left: auto;
+}
+
+.group-card, .info-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.group-card {
+    background-color: white;
+}
+
+.info-card {
+    background-color: #f8f9fa;
+    width: 26vw;
+}
+
+.member-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.member-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.member-item p {
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.member-item p strong {
+    font-weight: bold;
+}
+
+.member-item .role-text {
+    font-size: 0.85em; /* Ajuste o tamanho conforme necessário */
+    margin-left: 5px; /* Espaçamento entre o nome e o cargo */
+    font-weight: normal;
+}
+
+.member-item button {
+    margin-left: 10px;
+    background-color: red;
+}
+
+.member-item button:hover {
+    margin-left: 10px;
+    background-color: black;
+}
+
+#edit-group-btn {
+    background-color: transparent;
+    color: black; /* Texto branco */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor de mãozinha */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#edit-group-btn:hover {
+    color: #e9a5ae;
+}
+
+#edit-group-btn svg {
+    width: 20px; /* Aumenta o tamanho do ícone */
+    height: 20px; /* Aumenta o tamanho do ícone */
+}
+
+.modal-header .btn-close {
+    background: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    font-size: 1.5rem; /* Aumentar o tamanho do ícone */
+    cursor: pointer; /* Cursor de mãozinha */
+    color: black; /* Cor preta */
+    padding: none;
+    margin: none;
+}
+
+.modal-header .btn-close:hover {
+    color: #e9a5ae; /* Cor rosa ao passar o mouse */
+}
+
+.modal-header .btn-close span {
+    font-size: 1.5rem; /* Tamanho do "X" */
+}
+
+#add-member-btn {
+    display: none;
+}
+
+#search-user-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-user-form .form-control {
+    flex: 1;
+    margin-right: 10px; /* Adiciona espaçamento à direita */
+}
+
+#search-user-form .btn-search {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-user-form .btn-search:hover {
+    background-color: #e9a5ae;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+}
+
+.search-result-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.search-result-item p {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.search-result-item .btn-primary {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-result-item .btn-primary:hover {
+    background-color: #e9a5ae;
+}
+
+.search-result-item .btn-danger {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-result-item .btn-danger:hover {
+    background-color: black;
+}
+
+.search-result-item .user-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Estiliza a barra de rolagem para navegadores baseados no Webkit (Chrome, Safari) */
+.messages-window::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+.messages-window::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor do trilho */
+}
+
+.messages-window::-webkit-scrollbar-thumb {
+    background: #000; /* Cor do polegar (a parte que você pode arrastar) */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.messages-window::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do polegar ao passar o mouse */
+}
+
+/* Estiliza a barra de rolagem para navegadores Firefox */
+.messages-window {
+    scrollbar-width: thin; /* Define a barra de rolagem como fina */
+    scrollbar-color: #000 #f1f1f1; /* Define a cor do polegar e do trilho */
+}
+
+/*START FOOTER STYLE*/
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 150px;
+}
+
+.container-footer .container-footer-nav{
+    width: 100%;
+    background: #000;
+}
+
+.container-footer .container-footer-nav .footer-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 10px 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options{
+    display: flex;
+    max-width: 650px;
+    justify-content: space-between;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul{
+    list-style: none;
+    padding: 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul li{
+    margin: 0 0 10px 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul a{
+    color: #fff;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option ul a:hover{
+    color: #e9a5ae;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social{
+    display: flex;
+    align-items: center;
+}
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social a{
+    text-decoration: none;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social svg{
+    fill: #fff;
+    cursor: pointer;
+    transition: fill .2s;
+    margin: 0 10px 0 0;
+}
+
+.container-footer .container-footer-nav .footer-nav .footer-nav-options .option .social a:hover svg{
+    fill: #e9a5ae;
+}
+
+.container-footer .container-footer-nav .footer-nav img{
+    width: 200px;
+    margin: 0 0 40px 0;
+}
+
+.container-footer .footer-copy{
+    width: 100%;
+    text-align: center;
+    background: #272727;
+    color: #fff;
+    padding: 10px;
+}
+/*END FOOTER STYLE*/
