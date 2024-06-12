@@ -294,6 +294,45 @@ document.getElementById('save-changes').addEventListener('click', async function
     }
 });
 
+document.getElementById('save-group-btn').addEventListener('click', async function() {
+    const groupName = document.getElementById('group-name').value;
+    const groupDescription = document.getElementById('group-description').value;
+    const groupPicture = document.getElementById('group-picture').files[0];
+
+    if (groupName && groupDescription) {
+        const uid = getUidFromUrl(); // Assume que o usuário está logado e o UID está na URL
+
+        // Upload da imagem do grupo se houver
+        let groupPictureUrl = '';
+        if (groupPicture) {
+            const groupPictureRef = ref(storage, `group_pictures/${groupPicture.name}`);
+            await uploadBytes(groupPictureRef, groupPicture);
+            groupPictureUrl = await getDownloadURL(groupPictureRef);
+        }
+
+        // Adicionar grupo ao Firestore
+        const newGroupRef = await addDoc(collection(db, "groups"), {
+            groupName: groupName,
+            groupDescription: groupDescription,
+            groupPicture: groupPictureUrl,
+            members: [{ uid: uid, role: 'admin' }], // O usuário que criou o grupo é o admin
+            createdAt: new Date()
+        });
+
+        // Adicionar grupo ao usuário
+        const userRef = doc(db, "users", uid);
+        await updateDoc(userRef, {
+            groups: arrayUnion(newGroupRef.id)
+        });
+
+        alert('Grupo criado com sucesso!');
+        $('#createGroupModal').modal('hide');
+        window.location.reload();
+    } else {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+    }
+});
+
 document.getElementById('confirm-change').addEventListener('click', async function() {
     const reader = new FileReader();
     reader.onload = async function(e) {
